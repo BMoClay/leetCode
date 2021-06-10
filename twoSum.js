@@ -84,25 +84,62 @@
 // const target = 9
 // twoSum(nums, target)
 
-var twoSum = function(numbers, target) {
-    let map = [];
-    let result = [];
+// var twoSum = function(numbers, target) {
+//     let map = [];
+//     let result = [];
 
-    for (let i = 0; i < numbers.length; i++){
-        if (map[numbers[i]] != null) {
-            index = map[numbers[i]]
-            result[0] = index + 1;
-            result[1] = i + 1;
-            break;
-        } else {
-            map[target - numbers[i]] = i;
-        }
+//     for (let i = 0; i < numbers.length; i++){
+//         if (map[numbers[i]] != null) {
+//             index = map[numbers[i]]
+//             result[0] = index + 1;
+//             result[1] = i + 1;
+//             break;
+//         } else {
+//             map[target - numbers[i]] = i;
+//         }
+//     }
+//     console.log(result)
+//         return result
+// };
+
+
+// const nums = [2, 7, 11, 15]
+// const target = 9
+// twoSum(nums, target)
+
+array = [2,7,11,15]
+goal = 9
+
+const twoSum = () => {
+    let numberMap = new Map();
+
+    for (let i = 0; i < array.length; i++) {
+        el = array[i]
+
+        if(numberMap.has(goal - el))
+            return [i, numberMap.get(goal - el)];
+        else numberMap.set(el, i)
     }
-    console.log(result)
-        return result
+    console.log(goal)
+    return [];
 };
 
+twoSum(array, goal);
+ array = [2,7,11,15]
+goal = 9
 
-const nums = [2, 7, 11, 15]
-const target = 9
-twoSum(nums, target)
+const twoSum = () => {
+    let numberMap = new Map();
+
+    for (let i = 0; i < array.length; i++) {
+        el = array[i]
+        
+        if(numberMap.has(goal - el))
+            return [i, numberMap.get(goal - el)];
+        else numberMap.set(el, i)
+    }
+    console.log(goal)
+    return [];
+};
+
+twoSum(array, goal);  

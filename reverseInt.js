@@ -33,13 +33,22 @@
 // let joined = reversed.join('')
 // return joined
 
-const reverseInt = (number) => {
-    let limit = 2147483647;
-    const k = number < 0 ? -1 : 1;
-    const n = Number(String(Math.abs(number)).split('').reverse().join(''));
-    console.log(n)
-    return n > limit ? 0 : n * k;
-}
+// const reverseInt = (number) => {
+//     const limit = 2147483648;
+//     const k = number < 0 ? -1 : 1;
+//     const n = Number(String(Math.abs(number)).split('').reverse().join(''));
+//     console.log(n)
+//     return n > limit ? 0 : n * k;
+// }
 
-const number = 123;
-reverseInt(number)
+// let number = 123234234234234234234;
+// reverseInt(number)
+
+const reverse = nums => {
+    const limit = 2147483648;
+    const k = nums < 0 ? -1 : 1;
+    const n = Number(String(Math.abs(nums)).split('').reverse().join(''));
+    return n > limit ? 0 : n * k;
+};
+
+console.log(reverse(-1238787))

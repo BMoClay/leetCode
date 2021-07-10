@@ -16,7 +16,7 @@ const twoSum = (numbers, target) => {
 
     for (let i = 0; i < numbers.length; i++) {
         hashMap[numbers[i]] = i
-        console.log(`hashmap create1 ${hashMap[numbers[i]]}`)
+        // console.log(`hashmap create1 ${hashMap[numbers[i]]}`)
      if (hashMap[target - numbers[i]] !== undefined) {
          results.push(hashMap[target - numbers[i]], hashMap[numbers[i]])
         }

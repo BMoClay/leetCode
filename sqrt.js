@@ -1,7 +1,7 @@
 const mySqr = (x) => {
     let i = 0
     while (i*i < x) i++;
-    if (x*x != x) i--;
+    if (i*i != x) i--;
     return i
 }
 

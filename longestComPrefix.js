@@ -29,7 +29,6 @@ const longestCommon = (arr) => {
 
     for (let i = 0; i<firstWord.length; i++){
         let currentChar = firstWord[i]
-
         for (let word of arr){
             if (currentChar !== word[i]){
                 return prefix

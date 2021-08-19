@@ -13,9 +13,6 @@ const longestCommonPrefix = (strs) => {
             checker = str
         }
     }
-
-    // console.log(checker)
-    // console.log(newStrs)
     
     for (let i = 0; i < newStrs.length; i ++) { 
         //console.log(newStrs[i])

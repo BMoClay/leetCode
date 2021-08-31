@@ -8,7 +8,7 @@ const isValid = (str) => {
 
         if (currentChar === "(" || currentChar === "[" || currentChar === "{"){
             stack.push(currentChar)
-        } else if (stack[stack.length -1] === bracketObj[currentChar]){
+        } else if (lastChar === bracketObj[currentChar]){
             stack.pop()
         } else return false
     }

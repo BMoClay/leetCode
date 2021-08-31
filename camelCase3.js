@@ -24,9 +24,7 @@ const camelCase = (...args) => {
     return result
 }
 
-
-
-const args = [["apple", "One"], ["Apple", "TWO"], ["appLe", "thRee", "FOUR"], ["bapple"]]
+const args = [["apple", "One"], ["Apple", "TWO"], ["appLe", "thRee", "FOUR"]]
 
 let res = "appleOne appleTwo appleThreeFour"
 console.log(camelCase(args))
